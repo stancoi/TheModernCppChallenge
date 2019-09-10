@@ -1,0 +1,25 @@
+language: cpp
+dist: bionic
+sudo: false
+
+#addons:
+#  apt:
+#    sources:
+#     - ubuntu-toolchain-r-test packages: - g++-9
+     
+matrix:
+  include:
+    - os: linux
+      compiler: "gcc"
+    - os: linux
+      compiler: "clang"
+ 
+script:
+# - CXX=/usr/bin/g++-9 CC=/usr/bin/gcc-9 cmake .
+ - cmake .
+ 
+ # Let cmake choose which configuration to use: GNU make, Visual studio, ninja... Just build it
+ - cmake --build . -- -j$(getconf _NPROCESSORS_ONLN)
+ 
+ notifications:
+   email: false

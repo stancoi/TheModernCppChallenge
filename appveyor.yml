@@ -1,0 +1,15 @@
+image:
+  - Visual Studio 2019
+
+#not required
+clone_folder: c:\projects\source
+
+build_script: - cmd: >-
+    if exist build\ (rd /s /q build\)
+    else (mkdir build)
+ 
+    cd build
+
+    cmake c:\projects\source\ -G "Visual Studio 16"
+
+    cmake --build . --config "Debug"
