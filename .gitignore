@@ -1,0 +1,10 @@
+# CMake project files
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+
+# Makefile
+Makefile
+
+#Executables
+
