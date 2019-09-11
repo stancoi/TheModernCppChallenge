@@ -12,5 +12,6 @@ endif()
 #set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 add_subdirectory(Chapter01/01)
+add_subdirectory(Chapter01/02)
 
 
