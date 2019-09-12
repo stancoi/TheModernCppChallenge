@@ -6,7 +6,7 @@ if (MSVC)
     add_compile_options(/W4)
 else()
     message(status "** Setting GCC/clang flags")
-    add_compile_options(-std=c++11 -Wall -Wextra -Wpedantic)
+    add_compile_options(-std=c++11 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wpedantic)
 endif()
 
 #set_property(GLOBAL PROPERTY USE_FOLDERS ON)
