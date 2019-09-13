@@ -2,12 +2,12 @@
 #include <vector>
 #include <numeric>
 
-unsigned int gcd_euclid (unsigned int const a, unsigned int const b)
+unsigned int gcd_euclid(unsigned int const a, unsigned int const b)
 {
     return b == 0 ? a : gcd_euclid(b, a % b);
 }
 
-unsigned int lcm (unsigned int const a, unsigned int const b)
+unsigned int lcm(unsigned int const a, unsigned int const b)
 {
     unsigned int h = gcd_euclid(a, b);
     return h ? (a * (b / h)) : 0;
