@@ -1,6 +1,6 @@
 #include <iostream>
 
-bool isPrime(unsigned int n)
+static bool isPrime(unsigned int n)
 {
     if (n <=1)
         return false;
