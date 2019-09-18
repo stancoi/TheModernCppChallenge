@@ -11,9 +11,9 @@ class ipv4
          unsigned char const c, unsigned char d):
         m_data{{a, b, c, d}} {}
     explicit ipv4(uint32_t a) :
-        m_data {{ static_cast<unsigned char> ((a >> 24) && 0xFF),
-                static_cast<unsigned char> ((a >> 16) && 0xFF),
-                static_cast<unsigned char> ((a >> 8) && 0xFF),
+        m_data {{ static_cast<unsigned char> ((a >> 24) & 0xFF),
+                static_cast<unsigned char> ((a >> 16) & 0xFF),
+                static_cast<unsigned char> ((a >> 8) & 0xFF),
                 static_cast<unsigned char> (a & 0xFF)}} {}
 
     std::string to_string() const
