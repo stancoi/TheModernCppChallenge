@@ -21,7 +21,7 @@ int main()
     std::cout << "Enter limit: ";
     std::cin >> limit;
 
-    for (int i = limit; i > 1; i--)
+    for (unsigned int i = limit; i > 1; i--)
     {
         if (isPrime(i))
         {

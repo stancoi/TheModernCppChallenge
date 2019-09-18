@@ -17,11 +17,11 @@ bool isPrime(unsigned int n)
 }
 int main()
 {
-    int limit = 0;
+    unsigned int limit = 0;
     std::cout << "Enter limit: ";
     std::cin >> limit;
 
-    for (int i = 2; i <= limit; ++i)
+    for (unsigned int i = 2; i <= limit; ++i)
     {
         if (isPrime(i) && isPrime(i + 6))
         {
