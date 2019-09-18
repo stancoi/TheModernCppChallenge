@@ -1,11 +1,11 @@
 #include <iostream>
 
-unsigned int gcd_euclid(unsigned int const a, unsigned int const b)
+static unsigned int gcd_euclid(unsigned int const a, unsigned int const b)
 {
     return b == 0 ? a : gcd_euclid(b, a % b);
 }
 
-unsigned int gcd_euclid2(unsigned int const a, unsigned int const b)
+static unsigned int gcd_euclid2(unsigned int const a, unsigned int const b)
 {
     if (a == b)
     {

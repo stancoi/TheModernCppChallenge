@@ -14,7 +14,7 @@ elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
     add_compile_options(-std=c++11 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wpedantic)
 elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
     message(status "** Setting Clang flags")
-    add_compile_options(-std=c++11 -Weverything -Wno-c++98-compat)
+    add_compile_options(-std=c++11 -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic)
 endif()
 
 #set_property(GLOBAL PROPERTY USE_FOLDERS ON)
