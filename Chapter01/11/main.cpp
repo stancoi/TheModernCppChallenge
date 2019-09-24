@@ -34,7 +34,7 @@ int main()
     {
         std::cout << i << '\t' << to_roman(i) << '\n';
     }
-    int number = 0;
+    unsigned int number = 0;
     std::cout << "number:";
     std::cin >> number;
     std::cout << to_roman(number) << '\n';
