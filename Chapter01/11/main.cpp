@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 
-std::string to_roman(unsigned int value)
+static std::string to_roman(unsigned int value)
 {
     std::vector<std::pair<unsigned int ,char const*>> roman
     {
@@ -29,7 +29,7 @@ std::string to_roman(unsigned int value)
 
 int main()
 {
-    for (int i = 0; i <= 100; ++i)
+    for (unsigned int i = 0; i <= 100; ++i)
     {
         std::cout << i << '\t' << to_roman(i) << '\n';
     }
