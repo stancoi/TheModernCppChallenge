@@ -8,6 +8,7 @@ message("-------------------------")
 
 if(MSVC)
     message(status "** Setting MSVC flags")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
     add_compile_options(/W4)
 elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
     message(status "** Setting GCC flags")
