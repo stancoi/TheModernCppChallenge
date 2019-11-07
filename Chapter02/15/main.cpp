@@ -16,6 +16,13 @@ class ipv4
                 static_cast<unsigned char> ((a >> 8) & 0xFF),
                 static_cast<unsigned char> (a & 0xFF)}} {}
 
+    ipv4(ipv4 const & other) : m_data(other.m_data) {}
+    ipv4& operator=(ipv4 const & other)
+    {
+        m_data = other.m_data;
+        return *this;
+    }
+
     std::string to_string() const
     {
         std::stringstream sstr;
