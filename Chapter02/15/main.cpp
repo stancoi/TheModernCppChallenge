@@ -23,6 +23,8 @@ class ipv4
         return *this;
     }
 
+    ~ipv4() {}
+
     std::string to_string() const
     {
         std::stringstream sstr;
@@ -38,6 +40,19 @@ class ipv4
            << static_cast<int>(addr.m_data[3]);
         return os;
     }
+
+    friend std::istream& operator>>(std::istream& is, ipv4& a)
+    {
+        char d1, d2, d3;
+        int b1, b2, b3, b4;
+        is >> b1 >> d1 >> b2 >> d2 >> b3 >> d3 >> b4;
+        if (d1 == '.' && d2 == '.' && d3 == '.')
+            a = ipv4(b1, b2, b3, b4);
+        else
+        {
+        }
+        return is;        
+    }
  private:
     std::array<unsigned char, 4> m_data;
 };
@@ -47,4 +62,14 @@ int main()
     ipv4 addr(250, 251, 252, 255);
     std::cout << addr << '\n';
     std::cout << addr.to_string() << '\n';
+
+    ipv4 b = addr;
+    ipv4 c;
+    c = b;
+
+    ipv4 ip;
+    std::cout << ip << '\n';
+    std::cin >> ip;
+    if(!std::cin.fail())
+        std::cout << ip << '\n';
 }
