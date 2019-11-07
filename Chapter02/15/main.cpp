@@ -6,11 +6,11 @@
 class ipv4
 {
  public:
-    ipv4() : m_data { {0} } {}
-    ipv4(unsigned char const a, unsigned char b,
-         unsigned char const c, unsigned char d):
+    constexpr ipv4() : m_data { {0} } {}
+    constexpr ipv4(unsigned char const a, unsigned char b,
+                    unsigned char const c, unsigned char d):
         m_data{{a, b, c, d}} {}
-    explicit ipv4(uint32_t a) :
+    explicit constexpr ipv4(uint32_t a) :
         m_data {{ static_cast<unsigned char> ((a >> 24) & 0xFF),
                 static_cast<unsigned char> ((a >> 16) & 0xFF),
                 static_cast<unsigned char> ((a >> 8) & 0xFF),
