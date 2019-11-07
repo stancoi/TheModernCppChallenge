@@ -44,7 +44,7 @@ class ipv4
     friend std::istream& operator>>(std::istream& is, ipv4& a)
     {
         char d1, d2, d3;
-        int b1, b2, b3, b4;
+        unsigned char b1, b2, b3, b4;
         is >> b1 >> d1 >> b2 >> d2 >> b3 >> d3 >> b4;
         if (d1 == '.' && d2 == '.' && d3 == '.')
             a = ipv4(b1, b2, b3, b4);
