@@ -50,6 +50,7 @@ class ipv4
             a = ipv4(b1, b2, b3, b4);
         else
         {
+            is.setstate(std::ios_base::failbit);
         }
         return is;
     }
@@ -72,4 +73,5 @@ int main()
     std::cin >> ip;
     if(!std::cin.fail())
         std::cout << ip << '\n';
+    return 0;
 }
