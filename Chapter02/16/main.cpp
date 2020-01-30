@@ -34,17 +34,21 @@ public:
                 (static_cast<unsigned long>(data[3]));
     }
 
+    // prefix ++
+    // no parameter, returns a reference
     ipv4& operator++()
     {
-        *this = ipv4(1 + to_ulong());
+        *this = ipv4(1 + to_ulong()); // do increment of "this" value
         return *this;
     }
 
-    ipv4& operator++(int)
+    // postfix ++
+    // dummy parameter, returns a value
+    ipv4 operator++(int)
     {
-        ipv4 result(*this);
-        ++(*this);
-        return *this;
+        ipv4 result(*this); // make a copy for result
+        ++(*this);          // use the prefix version to increment "this" value
+        return result;      // return the copy (the old) value
     }
 
     friend bool operator==(ipv4 const & a1, ipv4 const & a2)
