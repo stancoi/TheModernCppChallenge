@@ -64,9 +64,6 @@ public:
     iterator        end   ()        { return arr.data() + arr.size(); }
     const_iterator  begin () const  { return arr.data(); }
     const_iterator  end   () const  { return arr.data() + arr.size(); }
-
-    //Destructor
-    ~array2d(){};
 };
 int main()
 {
