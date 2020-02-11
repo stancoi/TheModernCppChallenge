@@ -6,11 +6,11 @@
 template <class T, std::size_t R, std::size_t C>
 class array2d
 {
-    typedef T                   value_type;
-    typedef value_type*         iterator;
-    typedef value_type const *  const_iterator;
-    typedef value_type&         reference;
-    typedef const value_type&   const_reference;
+    using value_type        = T;
+    using iterator          = value_type*;
+    using const_iterator    = value_type const *;
+    using reference         = value_type&;
+    using const_reference   = const value_type&;
 
     std::vector<value_type> arr;
 public:
