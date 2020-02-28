@@ -12,17 +12,17 @@ constexpr unsigned long TRUNCATE_EXISTING        = 5;
 constexpr unsigned long FILE_SHARE_READ          = 1;
 constexpr unsigned long FILE_ATTRIBUTE_NORMAL    = 0x00000080;
 
-constexpr long long INVALID_HANDLE_VALUE = -1;
+#define INVALID_HANDLE_VALUE ((HANDLE)(long)-1)
 
 int CloseHandle(HANDLE hObject) {return 0;}
 
-HANDLE CreateFileW(char const *, unsigned long, unsigned long, void*,
+HANDLE CreateFileW(wchar_t const *, unsigned long, unsigned long, void*,
                     unsigned long, unsigned long, HANDLE)
 {
     return INVALID_HANDLE_VALUE;
 }
 
-int ReadFile(HANDLE, void*, unsigned long, unsigned long, void*)
+int ReadFile(HANDLE, void*, unsigned long, unsigned long*, void*)
 {
     return 0;
 }
