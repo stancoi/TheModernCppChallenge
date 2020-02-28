@@ -12,7 +12,7 @@ constexpr unsigned long TRUNCATE_EXISTING        = 5;
 constexpr unsigned long FILE_SHARE_READ          = 1;
 constexpr unsigned long FILE_ATTRIBUTE_NORMAL    = 0x00000080;
 
-#define INVALID_HANDLE_VALUE ((HANDLE)(long)-1)
+HANDLE INVALID_HANDLE_VALUE = reinterpret_cast<HANDLE>(-1);
 
 int CloseHandle(HANDLE hObject) {return 0;}
 
