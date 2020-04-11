@@ -19,6 +19,7 @@ elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
 endif()
 
 #set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+set(LIBS_PATH "${CMAKE_SOURCE_DIR}/libs")
 
 add_subdirectory(Chapter01/01)
 add_subdirectory(Chapter01/02)
