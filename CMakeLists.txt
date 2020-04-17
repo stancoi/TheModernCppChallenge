@@ -18,8 +18,18 @@ elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
     add_compile_options(-std=c++17 -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic)
 endif()
 
-#set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+set(INCLUDE_PATH "${CMAKE_SOURCE_DIR}/include")
 set(LIBS_PATH "${CMAKE_SOURCE_DIR}/libs")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
+
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+# Adds a subdirectory to the build. The source_dir specifies the directory in which the source CMakeLists.txt
+# and code files are located.
+#add_subdirectory(${LIBS_PATH}/curl)
+#add_subdirectory(${LIBS_PATH}/curlcpp)
+#Add the given directories to those the compiler uses to search for include files.
+#include_directories(${CURLCPP_SOURCE_DIR}/include)
 
 add_subdirectory(Chapter01/01)
 add_subdirectory(Chapter01/02)
@@ -35,5 +45,5 @@ add_subdirectory(Chapter02/18)
 add_subdirectory(Chapter02/19)
 add_subdirectory(Chapter02/20)
 add_subdirectory(Chapter02/21)
-
+add_subdirectory(Chapter12/100)
 
