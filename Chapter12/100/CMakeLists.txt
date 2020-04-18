@@ -6,7 +6,7 @@ project(problem_100)
 #add_definitions(-DCURL_STATICLIB)
 
 #Add the given directories to those the compiler uses to search for include files.
-include_directories(${LIBS_PATH}/json)
+include_directories(${LIBS_PATH}/json/single_include)
 include_directories(${LIBS_PATH}/curl/include)
 include_directories(${LIBS_PATH}/curlcpp/include)
 
