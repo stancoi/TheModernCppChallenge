@@ -32,7 +32,7 @@ target_link_libraries(problem_100 curl)
 
 if (UNIX)
    #Add directories in which the linker will look for libraries
-   link_directories(${LIBS_PATH}/curlcpp/build/src)
+   #link_directories(${LIBS_PATH}/curlcpp/build/src)
 elseif(WIN32) 
 
 endif() 

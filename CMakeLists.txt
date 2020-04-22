@@ -18,7 +18,7 @@ elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
     add_compile_options(-std=c++17 -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic)
 endif()
 
-set(INCLUDE_PATH "${CMAKE_SOURCE_DIR}/include")
+#set(INCLUDE_PATH "${CMAKE_SOURCE_DIR}/include")
 set(LIBS_PATH "${CMAKE_SOURCE_DIR}/libs")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
 
